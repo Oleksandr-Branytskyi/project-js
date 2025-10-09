@@ -2,22 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Booksy | Trending Books</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <section class="books-section">
+      <h2 class="visually-hidden">Trending books</h2>
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+      <div class="books-header">
+        <h3 class="books-title">Books</h3>
+        <p class="books-count">Showing 10 of 100</p>
+      </div>
 
-    <load src="./partials/footer.html" />
+      <div class="dropdown">
+        <select id="categorySelect" class="dropdown-select">
+          <option value="all">All categories</option>
+        </select>
+      </div>
 
-    <script type="module" src="./main.js"></script>
+      <ul class="books-list" id="booksList"></ul>
+      <button class="show-more-btn" id="showMoreBtn">Show More</button>
+    </section>
+    <script src="./books.js"></script>
   </body>
 </html>
